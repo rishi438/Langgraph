@@ -21,7 +21,17 @@ def add(a: int, b:int):
     """This is addition function that adds two numbers"""
     return a + b
 
-tools = [add]
+@tool
+def multiply(a: int, b:int):
+    """This is multiplication function that adds two numbers"""
+    return a * b
+
+@tool
+def subtract(a: int, b:int):
+    """This is subtract function that subtracts two numbers"""
+    return a - b
+
+tools = [add, multiply, subtract]
 
 model = ChatOpenAI(
     model=os.environ["AZURE_OPENAI_DEPLOYMENT"],
@@ -74,5 +84,5 @@ def print_stream(stream):
             else:
                 message.pretty_print()
         printed_count = len(messages)
-inputs = {"messages":[("user","Add 2 and 4, Add 50+1223, Add 60 and 898")]} 
+inputs = {"messages":[("user","Add 2 and 4, Mutliply with 1223, Subtract 809 ")]} 
 print_stream(agent.stream(inputs, stream_mode="values"))
