@@ -1,2 +1,6 @@
 Hi I am Sarah Allali, 
 I'm Senior Technical trainer at Microsoft.
+
+AZURE_OPENAI_API_KEY=
+AZURE_OPENAI_BASE_URL=https://AI-Foundry-Practice-17.services.ai.azure.com/openai/v1/
+AZURE_OPENAI_DEPLOYMENT=gpt-5-mini

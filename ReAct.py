@@ -84,5 +84,5 @@ def print_stream(stream):
             else:
                 message.pretty_print()
         printed_count = len(messages)
-inputs = {"messages":[("user","Add 2 and 4, Mutliply with 1223, Subtract 809 ")]} 
+inputs = {"messages":[("user","Add 2 and 4, Mutliply with 1223, Subtract 809 and tell me a  joke")]} 
 print_stream(agent.stream(inputs, stream_mode="values"))
